@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
           appBar: AppAppBar(
-            name: LocaleKeys.experience.tr(),
+            name: LocaleKeys.habits.tr(),
             withSettings: true,
           ),
           body: child,

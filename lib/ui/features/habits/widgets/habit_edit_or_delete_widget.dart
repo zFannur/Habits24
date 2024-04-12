@@ -21,7 +21,7 @@ class HabitEditOrDeleteWidget extends StatelessWidget {
                 habit: habit,
                 onTap: (habit) {
                   context.read<HabitsBloc>().add(HabitUpdated(habit));
-                  context.popRoute();
+                  context.maybePop();
                 },
               ),
             );
@@ -33,7 +33,7 @@ class HabitEditOrDeleteWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            context.popRoute();
+            context.maybePop();
             context.read<HabitsBloc>().add(HabitDeleted(habit));
           },
           child: const Text(

@@ -1,9 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habits24/app/app.dart';
-import 'package:habits24/generated/locale_keys.g.dart';
 import 'package:habits24/ui/features/habits/habits.dart';
 
 @RoutePage()
@@ -21,10 +19,10 @@ class HabitsScreen extends StatelessWidget {
             } else if (state.status != HabitsStatus.success) {
               return const SizedBox();
             } else {
-              return Center(
+              return const Center(
                 child: Text(
-                  LocaleKeys.not_operations.tr(),
-                  //style: theme.textTheme.titleMedium,
+                  'Нет привычек',
+                  style: AppTextStyle.medium20,
                 ),
               );
             }
